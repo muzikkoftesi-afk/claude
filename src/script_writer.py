@@ -1,10 +1,16 @@
 """
 Video senaryosu (konuşma metni) üretir.
 - GROQ_API_KEY tanımlıysa: Groq'un ücretsiz katmanındaki bir LLM ile her seferinde
-  özgün, farklı bir senaryo üretilir (gerçekten "hep farklı video" için önerilir).
-- Tanımlı değilse: config/topics_bank.json içindeki gerçek/bilgi havuzundan
-  DAHA ÖNCE KULLANILMAMIŞ bir konu seçilir (bkz. src/history.py), her video için
-  özgün bir başlık üretir. Havuz tükenince otomatik sıfırlanır.
+  özgün, farklı bir senaryo üretilir. Elle bir --topics konusu verilmese bile
+  (topic=None), havuzdan daha önce kullanılmamış bir başlık seçilip Groq'a o
+  konu olarak verilir — böylece rastgele/otomatik konularda da Groq'un
+  çeşitliliğinden yararlanılır.
+- Groq tanımlı değilse veya başarısız olursa: config/topics_bank.json içindeki
+  gerçek/bilgi havuzundan DAHA ÖNCE KULLANILMAMIŞ bir konu seçilir
+  (bkz. src/history.py), her video için özgün bir başlık üretir. Groq
+  denendiyse ve başarısız olduysa, Groq için zaten seçilmiş olan aynı başlık
+  offline yazıma aktarılır (havuzdan ikinci bir konu tüketilmez). Havuz
+  tükenince otomatik sıfırlanır.
 """
 import json
 import random
@@ -61,10 +67,12 @@ def _pick_primary(bank, entries, topic_category):
     return _pick_unused_entry(entries)
 
 
-def _offline_short_script(topic_category: str | None, lang: str, audience: str) -> tuple[str, str]:
+def _offline_short_script(topic_category: str | None, lang: str, audience: str,
+                           primary: dict | None = None) -> tuple[str, str]:
     bank = _load_bank()
     entries = _flatten_bank(bank)
-    primary = _pick_primary(bank, entries, topic_category)
+    if primary is None:
+        primary = _pick_primary(bank, entries, topic_category)
 
     same_category_facts = [it["fact"] for it in bank[primary["category"]] if it["fact"] != primary["fact"]]
     supporting = random.sample(same_category_facts, k=min(2, len(same_category_facts)))
@@ -84,10 +92,12 @@ def _offline_short_script(topic_category: str | None, lang: str, audience: str) 
     return title, script
 
 
-def _offline_long_script(topic_category: str | None, lang: str) -> tuple[str, str]:
+def _offline_long_script(topic_category: str | None, lang: str,
+                          primary: dict | None = None) -> tuple[str, str]:
     bank = _load_bank()
     entries = _flatten_bank(bank)
-    primary = _pick_primary(bank, entries, topic_category)
+    if primary is None:
+        primary = _pick_primary(bank, entries, topic_category)
 
     category = primary["category"]
     facts = [it["fact"] for it in bank[category]]
@@ -137,7 +147,7 @@ def _groq_script(topic: str, lang: str, audience: str, video_type: str) -> tuple
             "https://api.groq.com/openai/v1/chat/completions",
             headers={"Authorization": f"Bearer {config.GROQ_API_KEY}"},
             json={
-                "model": "llama-3.3-70b-versatile",
+                "model": "openai/gpt-oss-120b",
                 "messages": [{"role": "user", "content": prompt}],
                 "temperature": 0.9,
             },
@@ -163,11 +173,24 @@ def generate_script(topic: str | None, lang: str, audience: str, video_type: str
     audience: 'general' | 'kids'
     video_type: 'short' | 'long'
     """
-    if config.GROQ_API_KEY and topic:
-        result = _groq_script(topic, lang, audience, video_type)
+    chosen_entry = None
+    effective_topic = topic
+
+    if config.GROQ_API_KEY and not topic:
+        # Elle konu verilmedi ama Groq mevcut: havuzdan daha önce kullanılmamış
+        # bir başlık seçip Groq'a onu konu olarak veriyoruz. Bu seçim burada
+        # "kullanıldı" işaretlenir; Groq başarısız olursa aynı seçimi
+        # (yeniden işaretlemeden) offline yazıma aktarıyoruz.
+        bank = _load_bank()
+        entries = _flatten_bank(bank)
+        chosen_entry = _pick_primary(bank, entries, None)
+        effective_topic = chosen_entry["title"]
+
+    if config.GROQ_API_KEY and effective_topic:
+        result = _groq_script(effective_topic, lang, audience, video_type)
         if result:
             return result
 
     if video_type == "short":
-        return _offline_short_script(topic, lang, audience)
-    return _offline_long_script(topic, lang)
+        return _offline_short_script(topic, lang, audience, primary=chosen_entry)
+    return _offline_long_script(topic, lang, primary=chosen_entry)
