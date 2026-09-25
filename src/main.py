@@ -164,3 +164,35 @@ def main():
                          help="Virgülle ayrılmış konu listesi. Boşsa rastgele konular kullanılır.")
     parser.add_argument("--lang", choices=["tr", "en"], default="tr", help="Seslendirme dili")
     parser.add_argument("--subtitle-lang", choices=["tr", "en"], default=None,
+                         help="Alt yazı dili (belirtilmezse --lang ile aynı olur)")
+    parser.add_argument("--audience", choices=["general", "kids"], default="general")
+    parser.add_argument("--video-type", choices=["short", "long"], default="short")
+    parser.add_argument("--count", type=int, default=1, help="Kaç video üretilecek")
+    args = parser.parse_args()
+
+    subtitle_lang = args.subtitle_lang or args.lang
+    os.makedirs(config.OUTPUT_DIR, exist_ok=True)
+
+    topics = [t.strip() for t in args.topics.split(",") if t.strip()]
+    if not topics:
+        topics = [None] * args.count
+    while len(topics) < args.count:
+        topics.append(None)
+    topics = topics[:args.count]
+
+    results = []
+    for i, topic in enumerate(topics, start=1):
+        try:
+            path = generate_one(topic, args.lang, args.audience, args.video_type,
+                                 subtitle_lang, i, config.OUTPUT_DIR)
+            results.append(path)
+        except Exception as e:
+            print(f"[HATA] Video {i} üretilemedi: {e}")
+
+    print("\nÜretilen videolar:")
+    for r in results:
+        print(f" - {r}")
+
+
+if __name__ == "__main__":
+    main()
