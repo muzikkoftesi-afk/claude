@@ -1,0 +1,612 @@
+{
+  "bilim": [
+    {
+      "title": "Işığın İnanılmaz Hızı",
+      "fact": "Işık hızı saniyede yaklaşık 300 bin kilometredir ve evrendeki en hızlı şeydir."
+    },
+    {
+      "title": "DNA'nın Şaşırtan Uzunluğu",
+      "fact": "İnsan vücudundaki DNA'yı düz bir çizgi haline getirsen Güneş'e 300 kez gidip gelebilirsin."
+    },
+    {
+      "title": "Ahtapotların Üç Kalbi",
+      "fact": "Ahtapotların üç kalbi ve mavi kanı vardır."
+    },
+    {
+      "title": "Balın Bitmeyen Ömrü",
+      "fact": "Bal, binlerce yıl sonra bile bozulmadan kalabilen tek besindir."
+    },
+    {
+      "title": "Yıldırımın Sıcaklığı",
+      "fact": "Bir yıldırım, Güneş'in yüzeyinden beş kat daha sıcaktır."
+    },
+    {
+      "title": "Beynin Enerji Açlığı",
+      "fact": "Beyin, vücudun sadece yüzde ikisini oluşturur ama enerjinin yüzde yirmisini kullanır."
+    },
+    {
+      "title": "Dünyanın Tuzlu Suları",
+      "fact": "Dünya'daki suyun yaklaşık yüzde 97'si tuzlu okyanus sularıdır."
+    },
+    {
+      "title": "Elmasın Gizli Formülü",
+      "fact": "Elmaslar aslında karbon atomlarının özel bir diziliminden oluşur."
+    },
+    {
+      "title": "Derimizin Yenilenmesi",
+      "fact": "Bir insan ömrü boyunca yaklaşık 25 metrekare deri değiştirir."
+    },
+    {
+      "title": "Buzun Yüzme Sırrı",
+      "fact": "Su, katı haldeyken (buz) sıvı halinden daha az yoğundur, bu yüzden yüzer."
+    },
+    {
+      "title": "Kalp Pilinin İlk Çalışması",
+      "fact": "İlk kalp pili, bir laboratuvar kazası sonucu tesadüfen keşfedilen bir devreyle geliştirildi."
+    },
+    {
+      "title": "Suyun Üç Hali",
+      "fact": "Su, doğada aynı anda katı, sıvı ve gaz halinde bulunabilen nadir maddelerden biridir."
+    },
+    {
+      "title": "Mıknatısın Görünmez Gücü",
+      "fact": "Mıknatısların çektiği güç, gözle görülmeyen bir manyetik alan sayesinde oluşur."
+    }
+  ],
+  "uzay": [
+    {
+      "title": "Jüpiter'in Uydu Ordusu",
+      "fact": "Jüpiter'in 95'ten fazla uydusu vardır."
+    },
+    {
+      "title": "Venüs'ün Tuhaf Takvimi",
+      "fact": "Bir gün Venüs'te, bir yıldan daha uzun sürer."
+    },
+    {
+      "title": "Samanyolu'nun Yıldız Sayısı",
+      "fact": "Samanyolu galaksisinde 100 milyardan fazla yıldız olduğu tahmin ediliyor."
+    },
+    {
+      "title": "Ay Neden Uzaklaşıyor?",
+      "fact": "Ay, her yıl Dünya'dan yaklaşık 3.8 santimetre uzaklaşıyor."
+    },
+    {
+      "title": "Güneş'in Devasa Hacmi",
+      "fact": "Güneş, Dünya'nın yaklaşık 1.3 milyon katı hacminde."
+    },
+    {
+      "title": "Kara Deliklerin Gücü",
+      "fact": "Kara delikler o kadar güçlüdür ki ışık bile kaçamaz."
+    },
+    {
+      "title": "Mars'ta Mavi Gün Batımı",
+      "fact": "Mars'taki gün batımı mavi renktedir, Dünya'daki gibi turuncu değil."
+    },
+    {
+      "title": "Evrendeki Yıldız Sayısı",
+      "fact": "Evrende Dünya'daki kum tanelerinden daha fazla yıldız vardır."
+    },
+    {
+      "title": "Neptün'ün Fırtınalı Rüzgarları",
+      "fact": "Neptün'de rüzgarlar saatte 2 bin kilometre hıza ulaşabilir."
+    },
+    {
+      "title": "Uzayda 16 Gün Doğumu",
+      "fact": "Uluslararası Uzay İstasyonu'ndakiler günde 16 kez gün doğumu görür."
+    },
+    {
+      "title": "Plüton'un Gezegenlikten Çıkarılışı",
+      "fact": "Plüton, 2006 yılında bilimsel bir kararla 'cüce gezegen' olarak yeniden sınıflandırıldı."
+    },
+    {
+      "title": "Yıldızların Işığının Yaşı",
+      "fact": "Gece gökyüzünde gördüğümüz bazı yıldızların ışığı, bize ulaşana kadar binlerce yıl yol katetmiştir."
+    }
+  ],
+  "hayvanlar": [
+    {
+      "title": "Kedilerin Uyku Rekoru",
+      "fact": "Kediler günde ortalama 12-16 saat uyur."
+    },
+    {
+      "title": "Flamingoların Pembe Sırrı",
+      "fact": "Flamingolar pembe rengini yedikleri karidesten alır."
+    },
+    {
+      "title": "Yunusların İsim Islıkları",
+      "fact": "Yunuslar birbirlerine özel isimler gibi ıslık sesleri verir."
+    },
+    {
+      "title": "Karıncanın Güç Sırrı",
+      "fact": "Bir karınca kendi ağırlığının 50 katını taşıyabilir."
+    },
+    {
+      "title": "Fillerin Ayna Testi",
+      "fact": "Filler aynada kendilerini tanıyabilen nadir hayvanlardan biridir."
+    },
+    {
+      "title": "Bukalemunun Renk Dili",
+      "fact": "Bukalemunlar sadece kamuflaj için değil, ruh hallerini göstermek için de renk değiştirir."
+    },
+    {
+      "title": "Ahtapotun Tat Alma Sırrı",
+      "fact": "Bir ahtapot vücudunun her yerinden tat alabilir."
+    },
+    {
+      "title": "Develerin Hörgüç Sırrı",
+      "fact": "Develer hörgüçlerinde yağ depolar, su değil."
+    },
+    {
+      "title": "Baykuşun Dönen Boynu",
+      "fact": "Baykuşların boyunları 270 dereceye kadar dönebilir."
+    },
+    {
+      "title": "Penguenlerin Sadakati",
+      "fact": "Penguenler ömür boyu tek bir eşle çiftleşebilir."
+    },
+    {
+      "title": "Deniz Atlarının İlginç Üremesi",
+      "fact": "Deniz atlarında yavruları erkek birey karnında taşır."
+    },
+    {
+      "title": "Karıncaların Devasa Kolonileri",
+      "fact": "Bazı karınca kolonileri milyonlarca bireyden oluşabilir ve kilometrelerce yayılabilir."
+    }
+  ],
+  "tarih": [
+    {
+      "title": "Piramidin Yükseklik Rekoru",
+      "fact": "Büyük Piramit, 4500 yıldan uzun süre dünyanın en yüksek yapısı olarak kaldı."
+    },
+    {
+      "title": "Kleopatra'nın Şaşırtan Zaman Çizgisi",
+      "fact": "Kleopatra, Piramitlerin inşasından Ay'a inişten daha yakın bir zamanda yaşadı."
+    },
+    {
+      "title": "İstanbul'un Kıtalararası Konumu",
+      "fact": "İstanbul, tarihte hem Avrupa hem Asya kıtasına yayılan tek şehirlerden biridir."
+    },
+    {
+      "title": "Roma'nın Hızlı Postası",
+      "fact": "Roma İmparatorluğu'nda posta sistemi günde yaklaşık 80 kilometre hızla haber taşıyabiliyordu."
+    },
+    {
+      "title": "İlk Yazılı Kanunlar",
+      "fact": "İlk yazılı kanunlardan biri olan Hammurabi Kanunları MÖ 1754'te yazıldı."
+    },
+    {
+      "title": "Vikinglerin Erken Yolculuğu",
+      "fact": "Vikingler Kuzey Amerika'ya Kristof Kolomb'dan yaklaşık 500 yıl önce ayak bastı."
+    },
+    {
+      "title": "Eski Mısır'ın Diş Bakımı",
+      "fact": "Eski Mısırlılar diş macununun ilk formlarını kullanıyordu."
+    },
+    {
+      "title": "Anadolu'nun Eski Mirası",
+      "fact": "Anadolu, tarihte pek çok medeniyete ev sahipliği yapmış, dünyanın en eski yerleşim alanlarından biridir."
+    }
+  ],
+  "teknoloji": [
+    {
+      "title": "İlk Bilgisayar Virüsü",
+      "fact": "İlk bilgisayar virüsü 1986 yılında yazıldı."
+    },
+    {
+      "title": "Google'ın Saniyelik Hızı",
+      "fact": "Bir Google araması ortalama 0.2 saniyede sonuç verir."
+    },
+    {
+      "title": "İlk E-postanın Tarihi",
+      "fact": "İlk e-posta 1971 yılında gönderildi."
+    },
+    {
+      "title": "Cebindeki Ay Roketi Gücü",
+      "fact": "Akıllı telefonların çoğu, Apollo 11'i Ay'a götüren bilgisayardan çok daha güçlüdür."
+    },
+    {
+      "title": "Wi-Fi'nin Gizemli Adı",
+      "fact": "Wi-Fi kelimesi aslında herhangi bir şeyin kısaltması değildir."
+    },
+    {
+      "title": "Tahtadan Yapılan İlk Fare",
+      "fact": "İlk bilgisayar faresi 1964'te tahtadan yapılmıştı."
+    },
+    {
+      "title": "İnternetin İlk Sayfası",
+      "fact": "Dünyadaki ilk web sitesi hâlâ internette erişilebilir durumda."
+    },
+    {
+      "title": "Telefona Günlük Dokunuş Sayısı",
+      "fact": "Ortalama bir insan telefonuna günde 2600'den fazla kez dokunuyor."
+    },
+    {
+      "title": "Emojinin Doğuşu",
+      "fact": "İlk emoji, 1990'ların sonunda bir Japon mühendis tarafından tasarlandı."
+    },
+    {
+      "title": "USB'nin Ters Takma Şakası",
+      "fact": "USB fişlerinin ilk seferde ters takılması, kullanıcılar arasında ünlü bir şaka haline gelmiştir."
+    }
+  ],
+  "saglik": [
+    {
+      "title": "Vücudun Trilyonluk Hücreleri",
+      "fact": "Yetişkin bir insanın vücudunda yaklaşık 37 trilyon hücre bulunur."
+    },
+    {
+      "title": "Gülmenin Gizli Faydası",
+      "fact": "Düzenli gülmek, stres hormonlarını azaltır ve bağışıklık sistemini güçlendirir."
+    },
+    {
+      "title": "Uykunun Hafıza Gücü",
+      "fact": "Günde 7-8 saat uyku, hafızayı ve öğrenmeyi güçlendirir."
+    },
+    {
+      "title": "Kalbin Ömür Boyu Atışı",
+      "fact": "İnsan kalbi bir ömür boyunca yaklaşık 2.5 milyar kez atar."
+    },
+    {
+      "title": "Suyun Odaklanma Etkisi",
+      "fact": "Su içmek, konsantrasyonu ve enerji seviyesini doğrudan etkiler."
+    },
+    {
+      "title": "Egzersizin Beyne Etkisi",
+      "fact": "Düzenli egzersiz, beyinde yeni sinir hücrelerinin oluşumunu destekler."
+    },
+    {
+      "title": "Burnun Koku Gücü",
+      "fact": "İnsan burnu 1 trilyondan fazla farklı kokuyu ayırt edebilir."
+    }
+  ],
+  "gunluk_hayat": [
+    {
+      "title": "Küçük Hedeflerin Gücü",
+      "fact": "Küçük hedefler koymak, büyük hedeflere ulaşmayı kolaylaştırır."
+    },
+    {
+      "title": "Nefesin Anlık Etkisi",
+      "fact": "Derin nefes almak, anlık stresi saniyeler içinde azaltabilir."
+    },
+    {
+      "title": "Alışkanlığın 66 Günü",
+      "fact": "Yeni bir alışkanlık edinmek ortalama 66 gün sürer."
+    },
+    {
+      "title": "Minnettarlığın Mutluluk Etkisi",
+      "fact": "Minnettarlık günlüğü tutmak, mutluluk seviyesini artırdığı bilimsel olarak kanıtlanmıştır."
+    },
+    {
+      "title": "Sabah Işığının Uyku Etkisi",
+      "fact": "Sabah güneş ışığına maruz kalmak, gece uyku kalitesini artırır."
+    }
+  ],
+  "dogaharikalari": [
+    {
+      "title": "Grand Canyon'ın Oluşum Süresi",
+      "fact": "Grand Canyon'ın oluşumu 5-6 milyon yıl sürmüştür."
+    },
+    {
+      "title": "Amazon'un Oksijen Payı",
+      "fact": "Amazon Yağmur Ormanları dünya oksijeninin yaklaşık %20'sini üretir."
+    },
+    {
+      "title": "Ölü Deniz'in Yüzdürme Gücü",
+      "fact": "Ölü Deniz o kadar tuzludur ki üzerinde yüzmeden yatabilirsin."
+    },
+    {
+      "title": "Dünyanın En Yüksek Şelalesi",
+      "fact": "Dünyanın en yüksek şelalesi Angel Şelalesi, 979 metre yükseklikten düşer."
+    },
+    {
+      "title": "Sahra'nın Devasa Büyüklüğü",
+      "fact": "Sahra Çölü, dünyanın en büyük sıcak çölüdür ve İngiltere gibi ülkelerden büyüktür."
+    }
+  ],
+  "gizemler": [
+    {
+      "title": "Bermuda Üçgeni'nin Sırrı",
+      "fact": "Bermuda Şeytan Üçgeni'nde kaybolan gemi ve uçak sayısı hâlâ tam olarak açıklanamıyor."
+    },
+    {
+      "title": "Stonehenge'in Gizemi",
+      "fact": "Stonehenge'in nasıl ve neden inşa edildiği hâlâ tartışılıyor."
+    },
+    {
+      "title": "Nazca Çizgilerinin Sırrı",
+      "fact": "Nazca Çizgileri sadece havadan görülebilecek büyüklükte, binlerce yıl önce çizilmiş."
+    },
+    {
+      "title": "Antik Yunan'ın Bilgisayarı",
+      "fact": "Antikythera Mekanizması, 2000 yıl önce yapılmış inanılmaz karmaşık bir astronomi hesap makinesidir."
+    }
+  ],
+  "yemek": [
+    {
+      "title": "Balın Bozulmazlık Sırrı",
+      "fact": "Bal, dünyanın hiç bozulmayan tek doğal besinidir."
+    },
+    {
+      "title": "Domatesin Botanik Kimliği",
+      "fact": "Domates botanik olarak bir meyvedir, sebze değil."
+    },
+    {
+      "title": "Çikolatanın Rahatlatan Kokusu",
+      "fact": "Çikolatanın kokusu bile beyinde rahatlama hissi yaratabilir."
+    },
+    {
+      "title": "Safranın Yüksek Değeri",
+      "fact": "Dünyanın en pahalı baharatı safran, elle toplanan çiçek tepeciklerinden elde edilir."
+    },
+    {
+      "title": "Uzayda Yetişen İlk Sebze",
+      "fact": "Patates, uzayda yetiştirilen ilk sebzedir."
+    }
+  ],
+  "psikoloji": [
+    {
+      "title": "Beynin Anı Karışıklığı",
+      "fact": "İnsan beyni, gerçek bir anıyla hayal edilen bir anıyı bazen ayırt edemez."
+    },
+    {
+      "title": "Renklerin Gizli Etkisi",
+      "fact": "Renkler, duygu durumumuzu bilinçaltında etkileyebilir."
+    },
+    {
+      "title": "Müziğin Ağrı Azaltma Gücü",
+      "fact": "Müzik dinlemek, ağrı algısını azaltabilir."
+    },
+    {
+      "title": "Yalnızlıkta İç Konuşma",
+      "fact": "İnsanlar yalnız kaldıklarında bile kendileriyle konuşarak beyinlerini organize ederler."
+    }
+  ],
+  "spor": [
+    {
+      "title": "Maratonun Resmi Mesafesi",
+      "fact": "Bir maraton mesafesi (42.195 km) 1908 Londra Olimpiyatları'nda resmileşti."
+    },
+    {
+      "title": "Dünyanın En Popüler Sporu",
+      "fact": "Futbol, dünya çapında en çok izlenen spordur."
+    },
+    {
+      "title": "İlk Modern Olimpiyatlar",
+      "fact": "İlk modern olimpiyatlar 1896'da Atina'da düzenlendi."
+    },
+    {
+      "title": "Sporun Yaşlanmayı Yavaşlatması",
+      "fact": "İnsan vücudu, düzenli sporla yaşlanma sürecini yavaşlatabilir."
+    }
+  ],
+  "sanat_muzik": [
+    {
+      "title": "Beethoven'ın Sağırlıkla Bestesi",
+      "fact": "Beethoven, en ünlü senfonilerinden bazılarını tamamen sağır olduktan sonra besteledi."
+    },
+    {
+      "title": "Mona Lisa'nın Değişen Gülüşü",
+      "fact": "Mona Lisa'nın gülüşü, izleyicinin bakış açısına göre değişiyormuş gibi görünür."
+    },
+    {
+      "title": "En Pahalı Tablonun Fiyatı",
+      "fact": "Dünyanın en pahalı tablosu yüz milyonlarca dolara satılmıştır."
+    },
+    {
+      "title": "Müziğin Dil Öğrenme Etkisi",
+      "fact": "Müzik, dil öğrenme kapasitesini artırdığı bilimsel olarak gösterilmiştir."
+    }
+  ],
+  "ekonomi_finans": [
+    {
+      "title": "İlk Kağıt Paranın Tarihi",
+      "fact": "Dünyanın ilk kağıt parası Çin'de MS 7. yüzyılda kullanılmaya başlandı."
+    },
+    {
+      "title": "Bileşik Faizin Gücü",
+      "fact": "Bileşik faiz, Einstein tarafından 'dünyanın sekizinci harikası' olarak tanımlandığı söylenir."
+    },
+    {
+      "title": "Bitcoin'in Doğuşu",
+      "fact": "Bitcoin, bilinen ilk kripto para birimidir ve 2009'da ortaya çıktı."
+    },
+    {
+      "title": "Dünyanın Tüm Altını",
+      "fact": "Dünya üzerindeki toplam altının tamamı bir küpe sığacak kadar azdır."
+    }
+  ],
+  "dinozorlar": [
+    {
+      "title": "T-Rex'in Kısa Kolları",
+      "fact": "T-Rex'in kolları o kadar kısaydı ki kendi ağzına bile ulaşamazdı."
+    },
+    {
+      "title": "Dinozorların Kuş Mirası",
+      "fact": "Bilim insanları kuşların modern zamana kadar yaşayan dinozorlar olduğunu düşünüyor."
+    },
+    {
+      "title": "En Büyük Dinozorun Boyu",
+      "fact": "Argentinosaurus, bilinen en büyük dinozorlardan biriydi ve bir bina kadar uzundu."
+    },
+    {
+      "title": "Dinozorların Yumurta Boyutu",
+      "fact": "Bazı dinozor yumurtaları bir basketbol topundan bile büyüktü."
+    }
+  ],
+  "insanvucudu": [
+    {
+      "title": "Vücudun Kemik Sayısı",
+      "fact": "Yetişkin bir insan vücudunda 206 kemik bulunur, bebeklerde ise daha fazla kemik vardır."
+    },
+    {
+      "title": "Midenin Asit Gücü",
+      "fact": "Mide asidi o kadar güçlüdür ki metal bile eritebilir."
+    },
+    {
+      "title": "Gözün Kamera Gücü",
+      "fact": "İnsan gözü, yaklaşık 576 megapikselllik bir kameraya eşdeğer netlikte görebilir."
+    },
+    {
+      "title": "Saçın Büyüme Hızı",
+      "fact": "İnsan saçı ayda ortalama 1-1.5 santimetre uzar."
+    }
+  ],
+  "okyanuslar": [
+    {
+      "title": "Okyanusun Keşfedilmemiş Kısmı",
+      "fact": "Dünya okyanuslarının yüzde 80'inden fazlası hâlâ keşfedilmedi."
+    },
+    {
+      "title": "En Derin Nokta",
+      "fact": "Mariana Çukuru, bilinen en derin okyanus noktasıdır ve Everest Dağı'ndan bile derindir."
+    },
+    {
+      "title": "Mercan Resiflerinin Yaşı",
+      "fact": "Bazı mercan resifleri binlerce yıldır büyümeye devam ediyor."
+    },
+    {
+      "title": "Denizanalarının Yaşı",
+      "fact": "Denizanaları dinozorlardan bile önce, 500 milyon yıldır dünyada yaşıyor."
+    }
+  ],
+  "cografya": [
+    {
+      "title": "Rusya'nın Devasa Genişliği",
+      "fact": "Rusya, 11 farklı zaman dilimine yayılan tek ülkedir."
+    },
+    {
+      "title": "Vatikan'ın Küçük Boyutu",
+      "fact": "Vatikan, dünyanın en küçük bağımsız ülkesidir, bir parktan bile küçüktür."
+    },
+    {
+      "title": "Nil Nehri'nin Uzunluğu",
+      "fact": "Nil Nehri, dünyanın en uzun nehirlerinden biridir ve 11 ülkeden geçer."
+    },
+    {
+      "title": "Everest'in Büyüme Hızı",
+      "fact": "Everest Dağı, tektonik hareketler nedeniyle her yıl birkaç milimetre büyümeye devam ediyor."
+    },
+    {
+      "title": "Kanada'nın Göl Zenginliği",
+      "fact": "Kanada, dünyadaki tatlı suyun büyük bir kısmını barındıran binlerce göle sahiptir."
+    },
+    {
+      "title": "Sahra'nın Kar Sürprizi",
+      "fact": "Sahra Çölü'ne bazen çok nadir de olsa kar yağdığı görülmüştür."
+    },
+    {
+      "title": "Japonya'nın Ada Sayısı",
+      "fact": "Japonya, 6800'den fazla adadan oluşan bir takımadadır."
+    },
+    {
+      "title": "Avustralya'nın Kıta Boyutu",
+      "fact": "Avustralya hem bir ülke hem de bir kıta olarak kabul edilir."
+    }
+  ],
+  "bulusler": [
+    {
+      "title": "Ampulün İlk Mucidi",
+      "fact": "Pratik elektrik ampulü Thomas Edison tarafından 1879'da geliştirildi."
+    },
+    {
+      "title": "Fermuarın Doğuşu",
+      "fact": "Fermuar, 1893 yılında ayakkabı bağcıklarına alternatif olarak icat edildi."
+    },
+    {
+      "title": "Telefonun İlk Sözü",
+      "fact": "İlk telefon görüşmesinde Alexander Graham Bell asistanını yardıma çağırmıştı."
+    },
+    {
+      "title": "Çikolatalı Kurabiyenin Tesadüfü",
+      "fact": "Çikolatalı kurabiye, bir aşçının tarifi yanlış anlamasıyla tesadüfen icat edildi."
+    },
+    {
+      "title": "Mikrodalganın Şaşırtıcı Keşfi",
+      "fact": "Mikrodalga fırın, bir mühendisin cebindeki çikolatanın erimesiyle keşfedildi."
+    },
+    {
+      "title": "Velcronun Doğa İlhamı",
+      "fact": "Cırt cırt bant (velcro), bir mucidin köpeğine yapışan dikenli tohumlardan ilham alınarak icat edildi."
+    },
+    {
+      "title": "Post-it Notların Tesadüfi Doğuşu",
+      "fact": "Post-it notlar, başarısız olması beklenen zayıf bir yapıştırıcının başka bir amaçla kullanılmasıyla ortaya çıktı."
+    }
+  ],
+  "iklim_hava": [
+    {
+      "title": "Şimşeğin Saniyedeki Hızı",
+      "fact": "Bir şimşek çakması saniyenin çok küçük bir parçasında gerçekleşir ama gök gürültüsü sesi daha yavaş yayılır."
+    },
+    {
+      "title": "En Sıcak Kayıtlı Sıcaklık",
+      "fact": "Dünyada kayıtlara geçen en yüksek sıcaklık 56 santigrat dereceyi bulmuştur."
+    },
+    {
+      "title": "Kar Tanelerinin Deseni",
+      "fact": "Hiçbir kar tanesinin bir diğeriyle birebir aynı desende olmadığı düşünülür."
+    },
+    {
+      "title": "Gökkuşağının Oluşumu",
+      "fact": "Gökkuşağı, güneş ışığının yağmur damlalarında kırılıp yansımasıyla oluşur."
+    },
+    {
+      "title": "Kasırganın Döndürme Gücü",
+      "fact": "Güçlü bir kasırga, saatte 250 kilometreyi aşan rüzgar hızlarına ulaşabilir."
+    }
+  ],
+  "efsaneler_mitoloji": [
+    {
+      "title": "Zeus'un Gök Gürültüsü",
+      "fact": "Yunan mitolojisinde Zeus, gökyüzünün ve gök gürültüsünün tanrısı olarak kabul edilir."
+    },
+    {
+      "title": "Anka Kuşunun Yeniden Doğuşu",
+      "fact": "Anka kuşu efsanesine göre bu kuş küllerinden yeniden doğar."
+    },
+    {
+      "title": "Truva Atı'nın Hikayesi",
+      "fact": "Truva Atı, efsaneye göre şehri ele geçirmek için kullanılan dev bir tahta at hilesiydi."
+    },
+    {
+      "title": "Atlantis'in Kayıp Şehri",
+      "fact": "Atlantis, denizin dibine battığına inanılan efsanevi bir uygarlık olarak anlatılır."
+    },
+    {
+      "title": "Ejderha Efsanelerinin Kökeni",
+      "fact": "Pek çok kültürde ejderha efsaneleri, dinozor fosillerinin keşfinden ilham almış olabilir."
+    }
+  ],
+  "rekorlar": [
+    {
+      "title": "En Uzun İnsan Rekoru",
+      "fact": "Tarihte kayıtlara geçen en uzun insan 2.72 metre boyundaydı."
+    },
+    {
+      "title": "En Hızlı Koşan İnsan",
+      "fact": "En hızlı koşan insan, saatte 44 kilometreye yakın bir hıza ulaşmıştır."
+    },
+    {
+      "title": "Dünyanın En Büyük Pizzasının Boyutu",
+      "fact": "Yapılmış en büyük pizza, bir futbol sahasından bile büyüktü."
+    },
+    {
+      "title": "En Uzun Süre Uçan Kağıt Uçak",
+      "fact": "Bir kağıt uçak, havada 29 saniyeden fazla süre kalarak rekor kırmıştır."
+    },
+    {
+      "title": "En Ağır İnsan Tarafından Kaldırılan Ağırlık",
+      "fact": "Halter sporunda kaldırılan en ağır rekor, birkaç küçük arabanın toplam ağırlığına yakındır."
+    }
+  ],
+  "hayvanlar_deniz": [
+    {
+      "title": "Ahtapotun Mürekkep Sırrı",
+      "fact": "Ahtapotlar tehlike anında mürekkep püskürterek avcılarını şaşırtır."
+    },
+    {
+      "title": "Yunusların Uyku Şekli",
+      "fact": "Yunuslar uyurken beyinlerinin yarısını uyanık tutarak nefes almaya devam eder."
+    }
+  ]
+}

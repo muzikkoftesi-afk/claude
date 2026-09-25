@@ -1,0 +1,7 @@
+edge-tts>=7.0.0
+moviepy==1.0.3
+requests==2.32.3
+deep-translator==1.11.4
+numpy==1.26.4
+Pillow==9.5.0
+pydub==0.25.1
