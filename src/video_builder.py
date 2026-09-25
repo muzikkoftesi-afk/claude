@@ -178,30 +178,23 @@ def assemble_video(backgrounds: list, scene_durations: list, audio_path: str, ti
     return no_subs_path
 
 
-def burn_subtitles(video_path: str, srt_path: str, out_path: str, size):
-    # Yazı tipi, genişlik değil KISA kenar (min boyut) baz alınarak hesaplanır;
-    # aksi halde yatay (uzun form) videolarda altyazı devasa büyüyüp ekranın
-    # ortasına/üstüne taşıyordu.
-    base = min(size)
-    font_size = max(28, min(int(base * 0.052), 64))
-    style = (
-        f"FontName=DejaVu Sans,FontSize={font_size},PrimaryColour=&H00FFFFFF,"
-        f"OutlineColour=&H00000000,BorderStyle=3,Outline=2,Shadow=0,"
-        f"Alignment=2,MarginV={int(size[1]*0.06)}"
-    )
-    abs_srt_path = os.path.abspath(srt_path)
-    if not os.path.isfile(abs_srt_path):
-        raise RuntimeError(f"captions.srt dosyası bulunamadı: {abs_srt_path}")
+def burn_subtitles(video_path: str, caption_path: str, out_path: str, size=None):
+    # caption_path artık bir .ass dosyası: font, renk, konum (alt %20 bandı) ve
+    # kelime-kelime karaoke vurgusu dosyanın kendi Style/Events bölümünde tanımlı,
+    # bu yüzden burada ayrıca force_style uygulamaya gerek yok.
+    abs_caption_path = os.path.abspath(caption_path)
+    if not os.path.isfile(abs_caption_path):
+        raise RuntimeError(f"Altyazı dosyası bulunamadı: {abs_caption_path}")
 
-    srt_dir = os.path.dirname(abs_srt_path)
-    srt_name = os.path.basename(abs_srt_path)
+    cap_dir = os.path.dirname(abs_caption_path)
+    cap_name = os.path.basename(abs_caption_path)
     cmd = [
         "ffmpeg", "-y", "-i", os.path.abspath(video_path),
-        "-vf", f"subtitles={srt_name}:force_style='{style}'",
+        "-vf", f"subtitles={cap_name}",
         "-c:a", "copy", os.path.abspath(out_path),
     ]
     try:
-        subprocess.run(cmd, check=True, capture_output=True, cwd=srt_dir)
+        subprocess.run(cmd, check=True, capture_output=True, cwd=cap_dir)
     except subprocess.CalledProcessError as e:
         err = e.stderr.decode(errors="ignore")[-2500:] if e.stderr else "(stderr yok)"
         raise RuntimeError(f"ffmpeg altyazı yakma hatası (exit {e.returncode}):\n{err}") from e
