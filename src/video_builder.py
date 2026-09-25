@@ -153,14 +153,15 @@ def assemble_video(backgrounds: list, scene_durations: list, audio_path: str, ti
 
     narration = AudioFileClip(audio_path).subclip(0, total_duration)
 
+    music_clip = None
     if music_path and os.path.exists(music_path):
-        music = AudioFileClip(music_path)
-        if music.duration < total_duration:
-            music = afx.audio_loop(music, duration=total_duration)
+        music_clip = AudioFileClip(music_path)
+        if music_clip.duration < total_duration:
+            music_clip = afx.audio_loop(music_clip, duration=total_duration)
         else:
-            music = music.subclip(0, total_duration)
-        music = music.fx(afx.volumex, 0.12)
-        final_audio = CompositeAudioClip([music, narration])
+            music_clip = music_clip.subclip(0, total_duration)
+        music_clip = music_clip.fx(afx.volumex, 0.12)
+        final_audio = CompositeAudioClip([music_clip, narration])
     else:
         final_audio = narration
 
@@ -169,7 +170,10 @@ def assemble_video(backgrounds: list, scene_durations: list, audio_path: str, ti
     final.write_videofile(no_subs_path, fps=30, codec="libx264", audio_codec="aac",
                            threads=4, preset="veryfast", logger=None)
 
-    for c in (*scene_clips, bg_track, title_clip, narration, final):
+    clips_to_close = [*scene_clips, bg_track, title_clip, narration, final]
+    if music_clip is not None:
+        clips_to_close.append(music_clip)
+    for c in clips_to_close:
         try:
             c.close()
         except Exception:
