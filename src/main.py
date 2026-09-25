@@ -143,13 +143,16 @@ def generate_one(topic, lang, audience, video_type, subtitle_lang, index, out_di
     no_subs_path = video_builder.assemble_video(backgrounds, scene_durations, audio_path, title, size,
                                                   work_dir, music_path=music_path)
 
-    srt_path = os.path.join(work_dir, "captions.srt")
-    subtitles.build_srt(word_timings, srt_path, subtitle_lang, lang)
+    # Karaoke tarzı, kelime kelime renklenen altyazı için .ass kullanılıyor.
+    # Stil (renk, konum, font) subtitles.build_ass() içinde .ass dosyasına
+    # gömülüyor; burn_subtitles bu stili ffmpeg/libass üzerinden olduğu gibi yakar.
+    ass_path = os.path.join(work_dir, "captions.ass")
+    subtitles.build_ass(word_timings, ass_path, subtitle_lang, lang, size)
 
     safe_title = "".join(c for c in title if c.isalnum() or c in " _-").strip().replace(" ", "_")[:40]
     final_name = f"{index:02d}_{safe_title or 'video'}_{video_type}.mp4"
     final_path = os.path.join(out_dir, final_name)
-    video_builder.burn_subtitles(no_subs_path, srt_path, final_path, size)
+    video_builder.burn_subtitles(no_subs_path, ass_path, final_path, size)
 
     shutil.rmtree(work_dir, ignore_errors=True)
     return final_path
@@ -161,35 +164,3 @@ def main():
                          help="Virgülle ayrılmış konu listesi. Boşsa rastgele konular kullanılır.")
     parser.add_argument("--lang", choices=["tr", "en"], default="tr", help="Seslendirme dili")
     parser.add_argument("--subtitle-lang", choices=["tr", "en"], default=None,
-                         help="Alt yazı dili (belirtilmezse --lang ile aynı olur)")
-    parser.add_argument("--audience", choices=["general", "kids"], default="general")
-    parser.add_argument("--video-type", choices=["short", "long"], default="short")
-    parser.add_argument("--count", type=int, default=1, help="Kaç video üretilecek")
-    args = parser.parse_args()
-
-    subtitle_lang = args.subtitle_lang or args.lang
-    os.makedirs(config.OUTPUT_DIR, exist_ok=True)
-
-    topics = [t.strip() for t in args.topics.split(",") if t.strip()]
-    if not topics:
-        topics = [None] * args.count
-    while len(topics) < args.count:
-        topics.append(None)
-    topics = topics[:args.count]
-
-    results = []
-    for i, topic in enumerate(topics, start=1):
-        try:
-            path = generate_one(topic, args.lang, args.audience, args.video_type,
-                                 subtitle_lang, i, config.OUTPUT_DIR)
-            results.append(path)
-        except Exception as e:
-            print(f"[HATA] Video {i} üretilemedi: {e}")
-
-    print("\nÜretilen videolar:")
-    for r in results:
-        print(f" - {r}")
-
-
-if __name__ == "__main__":
-    main()
